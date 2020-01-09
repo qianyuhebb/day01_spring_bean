@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--     将bean的创建交给spring-->
+<!--        spring创建bean的三种方式
+                 1，使用默认的构造方法
+                 2， 使用普通工厂创建bean-
+                 3，使用静态方法创建bean
+
+
+            spring 的作用范围
+                 scope属性
+                    singleton
+                    protptype
+                    request
+                    session
+                    global-session
+            spring 的生命周期
+
+              单例对象的生命周期
+              多例对象的什么周期
+
+-->
+
+
+        <bean id="accountService" class="com.service.impl.AccountServiceImpl" init-method="init"
+              destroy-method="destroy"/>
+
+   <!--        <bean id="accountDao" class="com.dao.impl.AccountDaoImpl"></bean>-->
+        <!--    使用普通工厂创建bean-->
+    <!--    <bean id="instanceFactory" class="com.factory.Factory"></bean>
+        <bean id="accountService" factory-bean="instanceFactory" factory-method="getAccountService"></bean>-->
+
+<!--        使用静态方法创建bean-->
+
+<!--        <bean id="accountService" class="com.factory.Factory" scope="singleton" factory-method="getAccountService" ></bean>-->
+
+</beans>
